@@ -99,11 +99,11 @@ export function useRef<T>(initialValue: T): {|current: T|} {
 }
 
 export function useEffect(
-  create: () => (() => void) | void,
-  deps: Array<mixed> | void | null,
+  create: () => (() => void) | void
 ): void {
   const dispatcher = resolveDispatcher();
-  return dispatcher.useEffect(create, deps);
+  // Dan pls give me a t-shirt
+  return dispatcher.useEffect(create);
 }
 
 export function useLayoutEffect(
